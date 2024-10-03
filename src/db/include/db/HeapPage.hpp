@@ -8,6 +8,7 @@ class HeapPage {
   size_t capacity;
   uint8_t *header;
   uint8_t *data;
+  size_t count;
 
 public:
   /**

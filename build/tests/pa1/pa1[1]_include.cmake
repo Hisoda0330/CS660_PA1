@@ -1,0 +1,5 @@
+if(EXISTS "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1[1]_tests.cmake")
+  include("/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1[1]_tests.cmake")
+else()
+  add_test(pa1_NOT_BUILT pa1_NOT_BUILT)
+endif()

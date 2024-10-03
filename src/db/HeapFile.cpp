@@ -16,16 +16,17 @@ void HeapFile::insertTuple(const Tuple &t) {
   if (numPages > 0) {
     PageId lastPageId = {name, numPages - 1};
     Page &lastPage = bufferPool.getPage(lastPageId);
-    HeapPage heapPage(lastPage, td);
+    HeapPage lastHeapPage(lastPage, td);
 
-  if (heapPage.insertTuple(t)) {
-    bufferPool.markDirty(lastPageId);
-    return;
+    if (lastHeapPage.insertTuple(t)) {
+      bufferPool.markDirty(lastPageId);
+      return;
+    }
   }
   // If last page is full or there are no pages, create a new page
   Page newPage = {};
-  HeapPage heapPage(newPage, td);
-  if (!heapPage.insertTuple(t)) {
+  HeapPage newHeapPage(newPage, td);
+  if (!newHeapPage.insertTuple(t)) {
     throw std::runtime_error("Failed to insert tuple into new page.");
   }
 
@@ -37,6 +38,8 @@ void HeapFile::insertTuple(const Tuple &t) {
   PageId newPageId = {name, numPages - 1};
   bufferPool.markDirty(newPageId);
 }
+
+
 
 void HeapFile::deleteTuple(const Iterator &it) {
   // TODO pa2: implement
@@ -57,10 +60,14 @@ Tuple HeapFile::getTuple(const Iterator &it) const {
   // TODO pa2: implement
   // Get the database buffer pool
   BufferPool &bufferPool = getDatabase().getBufferPool();
-
+  // Check if the page ID is within valid range
+  if (it.page >= numPages) {
+    throw std::out_of_range("Page id " + std::to_string(it.page) + " out of range.");
+  }
+  
   // Get the page containing the tuple
   PageId pageId = {name, it.page};
-  const Page &page = bufferPool.getPage(pageId);
+  Page &page = bufferPool.getPage(pageId);
   HeapPage heapPage(page, td);
 
   // Return the tuple at the given slot
@@ -74,7 +81,7 @@ void HeapFile::next(Iterator &it) const {
 
   while (it.page < numPages) {
     PageId pageId = {name, it.page};
-    const Page &page = bufferPool.getPage(pageId);
+    Page &page = bufferPool.getPage(pageId);
     HeapPage heapPage(page, td);
 
     heapPage.next(it.slot);
@@ -103,7 +110,7 @@ Iterator HeapFile::begin() const {
   // Iterate over pages to find the first non-empty page
   while (pageId < numPages) {
     PageId pid = {name, pageId};
-    const Page &page = bufferPool.getPage(pid);
+    Page &page = bufferPool.getPage(pid);
     HeapPage heapPage(page, td);
 
     size_t firstSlot = heapPage.begin();

@@ -1,0 +1,80 @@
+[
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/src/db",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/db.dir/BufferPool.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/src/db/BufferPool.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/src/db/BufferPool.cpp",
+  "output": "src/db/CMakeFiles/db.dir/BufferPool.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/src/db",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/db.dir/Database.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/src/db/Database.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/src/db/Database.cpp",
+  "output": "src/db/CMakeFiles/db.dir/Database.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/src/db",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/db.dir/DbFile.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/src/db/DbFile.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/src/db/DbFile.cpp",
+  "output": "src/db/CMakeFiles/db.dir/DbFile.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/src/db",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/db.dir/HeapFile.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/src/db/HeapFile.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/src/db/HeapFile.cpp",
+  "output": "src/db/CMakeFiles/db.dir/HeapFile.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/src/db",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/db.dir/HeapPage.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/src/db/HeapPage.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/src/db/HeapPage.cpp",
+  "output": "src/db/CMakeFiles/db.dir/HeapPage.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/src/db",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/db.dir/Iterator.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/src/db/Iterator.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/src/db/Iterator.cpp",
+  "output": "src/db/CMakeFiles/db.dir/Iterator.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/src/db",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/db.dir/Tuple.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/src/db/Tuple.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/src/db/Tuple.cpp",
+  "output": "src/db/CMakeFiles/db.dir/Tuple.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock/include -I/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/clang++  -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/include -I/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/clang++  -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/pa1.dir/heap_test.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/tests/pa1/heap_test.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/tests/pa1/heap_test.cpp",
+  "output": "tests/pa1/CMakeFiles/pa1.dir/heap_test.cpp.o"
+},
+{
+  "directory": "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1",
+  "command": "/usr/bin/clang++  -I/Users/jinpeng/Desktop/CS660_PA1/src/db/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/include -isystem /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest -g -std=c++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/pa1.dir/tuple_test.cpp.o -c /Users/jinpeng/Desktop/CS660_PA1/tests/pa1/tuple_test.cpp",
+  "file": "/Users/jinpeng/Desktop/CS660_PA1/tests/pa1/tuple_test.cpp",
+  "output": "tests/pa1/CMakeFiles/pa1.dir/tuple_test.cpp.o"
+}
+]

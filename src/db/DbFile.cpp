@@ -12,7 +12,7 @@ const TupleDesc &DbFile::getTupleDesc() const { return td; }
 DbFile::DbFile(const std::string &name, const TupleDesc &td) : name(name), td(td) {
   // TODO pa2: open file and initialize numPages
   // Hint: use open, fstat
-  fileDescriptor = open(name.c_str(), O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+  int fileDescriptor = open(name.c_str(), O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
   if (fileDescriptor < 0) {
     throw std::runtime_error("Failed to open file: " + name);
   }

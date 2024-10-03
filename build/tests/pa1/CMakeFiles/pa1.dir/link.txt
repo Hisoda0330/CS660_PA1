@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/pa1.dir/heap_test.cpp.o CMakeFiles/pa1.dir/tuple_test.cpp.o -o pa1  ../../src/db/libdb.a ../../lib/libgtest_main.a ../../lib/libgtest.a

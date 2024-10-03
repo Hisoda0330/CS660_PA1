@@ -13,7 +13,13 @@ HeapPage::HeapPage(Page &page, const TupleDesc &td) : td(td) {
   data = page.data() + (capacity + 7) / 8;  // Header is stored in bits, so divide by 8 to get bytes
 
   // Zero out the header initially
-  memset(header, 0, (capacity + 7) / 8);
+  count = 0;
+  for(size_t i = 0; i < capacity; i++){
+    if(!empty(i)){
+      count++;
+    }
+  }
+  //count++;
 }
 
 size_t HeapPage::begin() const {
@@ -36,8 +42,9 @@ bool HeapPage::insertTuple(const Tuple &t) {
   for (size_t i = 0; i < capacity; ++i) {
     if (empty(i)) {
       // Mark slot as used in the header
-      header[i / 8] |= (1 << (i % 8));
-
+      int bitIndex = 7 - i % 8;
+      header[i / 8] |= (1 << bitIndex);
+      count++;
       // Serialize the tuple into the data section
       td.serialize(data + i * td.length(), t);
       return true;
@@ -51,12 +58,14 @@ void HeapPage::deleteTuple(size_t slot) {
   if (slot >= capacity) {
     throw std::out_of_range("Slot out of range.");
   }
+  if (empty(slot)) {
+    throw std::logic_error("Slot is already empty.");
+  }
 
   // Mark the slot as empty in the header
-  header[slot / 8] &= ~(1 << (slot % 8));
-
-  // Optionally, clear the data for the tuple (not necessary for functionality)
-  memset(data + slot * td.length(), 0, td.length());
+  int bitIndex = 7 - slot % 8;
+  header[slot / 8] &= ~(1 << bitIndex);
+  count --;
 }
 
 Tuple HeapPage::getTuple(size_t slot) const {
@@ -82,9 +91,10 @@ void HeapPage::next(size_t &slot) const {
 bool HeapPage::empty(size_t slot) const {
   // TODO pa2: implement
   if (slot >= capacity) {
-    throw std::out_of_range("Slot out of range.");
+    return true;
   }
 
   // Check the corresponding bit in the header
-  return (header[slot / 8] & (1 << (slot % 8))) == 0;
+  int bitIndex = 7 - slot % 8;
+  return (header[slot / 8] & (1 << bitIndex)) == 0;
 }

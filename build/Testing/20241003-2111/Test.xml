@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241003-2111-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.30.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="crc-dot1x-nat-10-239-182-15.bu.edu"
+	OSRelease="15.0"
+	OSVersion="24A335"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="126"
+	ProcessorCacheSize="32768"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="1024"
+	TotalPhysicalMemory="8192"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="1100"
+	>
+	<Testing>
+		<StartDateTime>Oct 03 17:52 EDT</StartDateTime>
+		<StartTestTime>1727992332</StartTestTime>
+		<TestList/>
+		<EndDateTime>Oct 03 17:52 EDT</EndDateTime>
+		<EndTestTime>1727992332</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

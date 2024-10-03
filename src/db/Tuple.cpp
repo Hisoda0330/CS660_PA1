@@ -116,69 +116,82 @@ size_t TupleDesc::size() const {
   // TODO pa2: implement
   return types.size();
 }
-
-Tuple TupleDesc::deserialize(const uint8_t *data) const {
-  // TODO pa2: implement
-}
-
+// Serialize a Tuple into a buffer
 void TupleDesc::serialize(uint8_t *data, const Tuple &t) const {
-  // TODO pa2: implement
   if (!compatible(t)) {
     throw std::logic_error("Tuple is not compatible with this TupleDesc.");
   }
 
   size_t offset = 0;
+  // Serialize each field of the Tuple into the buffer
   for (size_t i = 0; i < t.size(); ++i) {
     const field_t &field = t.get_field(i);
     switch (types[i]) {
       case type_t::INT:
-        std::memcpy(data + offset, &std::get<int>(field), INT_SIZE);
-        offset += INT_SIZE;
+        std::memcpy(data + offset, &std::get<int>(field), sizeof(int));
+        offset += sizeof(int);
         break;
       case type_t::DOUBLE:
-        std::memcpy(data + offset, &std::get<double>(field), DOUBLE_SIZE);
-        offset += DOUBLE_SIZE;
+        std::memcpy(data + offset, &std::get<double>(field), sizeof(double));
+        offset += sizeof(double);
         break;
       case type_t::CHAR: {
         const std::string &str = std::get<std::string>(field);
-        std::memcpy(data + offset, str.c_str(), CHAR_SIZE);
-        offset += CHAR_SIZE;
+        std::memcpy(data + offset, str.c_str(), sizeof(char) * CHAR_SIZE);
+        offset += sizeof(char) * CHAR_SIZE;
+        break;
+      }
+    }
+  }
+}
+Tuple TupleDesc::deserialize(const uint8_t *data) const {
+  // TODO pa2: implement
+  std::vector<field_t> fields;
+  size_t offset = 0;
+
+  // Deserialize each field from the buffer based on its type
+  for (const auto &type : types) {
+    switch (type) {
+      case type_t::INT: {
+        int intValue;
+        std::memcpy(&intValue, data + offset, sizeof(int));
+        fields.emplace_back(intValue);
+        offset += sizeof(int);
+        break;
+      }
+      case type_t::DOUBLE: {
+        double doubleValue;
+        std::memcpy(&doubleValue, data + offset, sizeof(double));
+        fields.emplace_back(doubleValue);
+        offset += sizeof(double);
+        break;
+      }
+      case type_t::CHAR: {
+        char charValue[CHAR_SIZE];
+        std::memcpy(charValue, data + offset, sizeof(char) * CHAR_SIZE);
+        fields.emplace_back(std::string(charValue, CHAR_SIZE));
+        offset += sizeof(char) * CHAR_SIZE;
         break;
       }
     }
   }
 }
 
+
 db::TupleDesc TupleDesc::merge(const TupleDesc &td1, const TupleDesc &td2) {
   // TODO pa2: implement
-  std::vector<field_t> fields;
-  size_t offset = 0;
+  // Create new vectors to store the merged field types and field names
+  std::vector<type_t> mergedTypes;
+  std::vector<std::string> mergedNames;
 
-  for (const auto &type : types) {
-    switch (type) {
-      case type_t::INT: {
-        int intValue;
-        std::memcpy(&intValue, data + offset, INT_SIZE);
-        fields.emplace_back(intValue);
-        offset += INT_SIZE;
-        break;
-      }
-      case type_t::DOUBLE: {
-        double doubleValue;
-        std::memcpy(&doubleValue, data + offset, DOUBLE_SIZE);
-        fields.emplace_back(doubleValue);
-        offset += DOUBLE_SIZE;
-        break;
-      }
-      case type_t::CHAR: {
-        char charValue[CHAR_SIZE];
-        std::memcpy(charValue, data + offset, CHAR_SIZE);
-        fields.emplace_back(std::string(charValue, CHAR_SIZE));
-        offset += CHAR_SIZE;
-        break;
-      }
-    }
-  }
+  // Append all field types and names from the first TupleDesc (td1)
+  mergedTypes.insert(mergedTypes.end(), td1.types.begin(), td1.types.end());
+  mergedNames.insert(mergedNames.end(), td1.names.begin(), td1.names.end());
 
-  return Tuple(fields);
+  // Append all field types and names from the second TupleDesc (td2)
+  mergedTypes.insert(mergedTypes.end(), td2.types.begin(), td2.types.end());
+  mergedNames.insert(mergedNames.end(), td2.names.begin(), td2.names.end());
+
+  // Return a new TupleDesc object with the merged field types and names
+  return TupleDesc(mergedTypes, mergedNames);
 }
