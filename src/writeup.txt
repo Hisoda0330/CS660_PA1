@@ -1,0 +1,10 @@
+Describe any design decisions you made.
+I have couple design decision when I first read the assignment. The PA1 require us to work around the function of the HeapPage, HeapFile, and tuple as interat eachother with the bufferpool. The operations such as inserting, deleting, and accessing in the HeapPage needs to 
+
+Describe any missing or incomplete elements of your code.
+
+
+Answer the analytical questions.
+
+
+Describe how long you spent on the assignment, and whether there was anything you found particularly difficult or confusing.
