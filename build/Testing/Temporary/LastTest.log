@@ -1,10 +1,10 @@
-Start testing: Oct 03 19:05 EDT
+Start testing: Oct 04 22:36 EDT
 ----------------------------------------------------------
 1/15 Testing: HeapPageTest.EmptyPage
 1/15 Test: HeapPageTest.EmptyPage
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapPageTest.EmptyPage" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapPageTest.EmptyPage" start time: Oct 03 19:05 EDT
+"HeapPageTest.EmptyPage" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -20,10 +20,10 @@ Note: Google Test filter = HeapPageTest.EmptyPage
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.10 sec
 ----------------------------------------------------------
 Test Passed.
-"HeapPageTest.EmptyPage" end time: Oct 03 19:05 EDT
+"HeapPageTest.EmptyPage" end time: Oct 04 22:36 EDT
 "HeapPageTest.EmptyPage" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/15 Test: HeapPageTest.FullHeader
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapPageTest.FullHeader" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapPageTest.FullHeader" start time: Oct 03 19:05 EDT
+"HeapPageTest.FullHeader" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -47,10 +47,10 @@ Note: Google Test filter = HeapPageTest.FullHeader
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"HeapPageTest.FullHeader" end time: Oct 03 19:05 EDT
+"HeapPageTest.FullHeader" end time: Oct 04 22:36 EDT
 "HeapPageTest.FullHeader" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 3/15 Test: HeapPageTest.CountTuples
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapPageTest.CountTuples" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapPageTest.CountTuples" start time: Oct 03 19:05 EDT
+"HeapPageTest.CountTuples" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -74,10 +74,10 @@ Note: Google Test filter = HeapPageTest.CountTuples
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"HeapPageTest.CountTuples" end time: Oct 03 19:05 EDT
+"HeapPageTest.CountTuples" end time: Oct 04 22:36 EDT
 "HeapPageTest.CountTuples" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,7 +85,7 @@ Test Passed.
 4/15 Test: HeapPageTest.InsertTuple
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapPageTest.InsertTuple" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapPageTest.InsertTuple" start time: Oct 03 19:05 EDT
+"HeapPageTest.InsertTuple" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -101,10 +101,10 @@ Note: Google Test filter = HeapPageTest.InsertTuple
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"HeapPageTest.InsertTuple" end time: Oct 03 19:05 EDT
+"HeapPageTest.InsertTuple" end time: Oct 04 22:36 EDT
 "HeapPageTest.InsertTuple" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,7 +112,7 @@ Test Passed.
 5/15 Test: HeapPageTest.DeleteTuple
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapPageTest.DeleteTuple" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapPageTest.DeleteTuple" start time: Oct 03 19:05 EDT
+"HeapPageTest.DeleteTuple" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -128,10 +128,10 @@ Note: Google Test filter = HeapPageTest.DeleteTuple
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"HeapPageTest.DeleteTuple" end time: Oct 03 19:05 EDT
+"HeapPageTest.DeleteTuple" end time: Oct 04 22:36 EDT
 "HeapPageTest.DeleteTuple" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -139,7 +139,7 @@ Test Passed.
 6/15 Test: HeapPageTest.GetTuple
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapPageTest.GetTuple" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapPageTest.GetTuple" start time: Oct 03 19:05 EDT
+"HeapPageTest.GetTuple" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -148,11 +148,37 @@ Note: Google Test filter = HeapPageTest.GetTuple
 [----------] Global test environment set-up.
 [----------] 1 test from HeapPageTest
 [ RUN      ] HeapPageTest.GetTuple
+/Users/jinpeng/Desktop/CS660_PA1/tests/pa1/heap_test.cpp:126: Failure
+Expected equality of these values:
+  std::get<int>(t1.get_field(0))
+    Which is: 0
+  660
+/Users/jinpeng/Desktop/CS660_PA1/tests/pa1/heap_test.cpp:127: Failure
+Expected equality of these values:
+  std::get<std::string>(t1.get_field(1))
+    Which is: ""
+  "Hello CS660!"
+/Users/jinpeng/Desktop/CS660_PA1/tests/pa1/heap_test.cpp:130: Failure
+Expected equality of these values:
+  std::get<int>(t2.get_field(0))
+    Which is: 33
+  65535 + 1
+    Which is: 65536
+[  FAILED  ] HeapPageTest.GetTuple (1 ms)
+[----------] 1 test from HeapPageTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] HeapPageTest.GetTuple
+
+ 1 FAILED TEST
 <end of output>
-Test time =   0.04 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Failed.
-"HeapPageTest.GetTuple" end time: Oct 03 19:05 EDT
+"HeapPageTest.GetTuple" end time: Oct 04 22:36 EDT
 "HeapPageTest.GetTuple" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -160,7 +186,7 @@ Test Failed.
 7/15 Test: HeapFileTest.InsertTuple
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapFileTest.InsertTuple" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapFileTest.InsertTuple" start time: Oct 03 19:05 EDT
+"HeapFileTest.InsertTuple" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -171,21 +197,21 @@ Note: Google Test filter = HeapFileTest.InsertTuple
 [ RUN      ] HeapFileTest.InsertTuple
 unknown file: Failure
 C++ exception with description "Page id 0 out of range." thrown in the test body.
-[  FAILED  ] HeapFileTest.InsertTuple (0 ms)
-[----------] 1 test from HeapFileTest (0 ms total)
+[  FAILED  ] HeapFileTest.InsertTuple (2 ms)
+[----------] 1 test from HeapFileTest (2 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (3 ms total)
 [  PASSED  ] 0 tests.
 [  FAILED  ] 1 test, listed below:
 [  FAILED  ] HeapFileTest.InsertTuple
 
  1 FAILED TEST
 <end of output>
-Test time =   0.01 sec
+Test time =   0.10 sec
 ----------------------------------------------------------
 Test Failed.
-"HeapFileTest.InsertTuple" end time: Oct 03 19:05 EDT
+"HeapFileTest.InsertTuple" end time: Oct 04 22:36 EDT
 "HeapFileTest.InsertTuple" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -193,7 +219,7 @@ Test Failed.
 8/15 Test: HeapFileTest.EmptyPage
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=HeapFileTest.EmptyPage" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"HeapFileTest.EmptyPage" start time: Oct 03 19:05 EDT
+"HeapFileTest.EmptyPage" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -204,21 +230,21 @@ Note: Google Test filter = HeapFileTest.EmptyPage
 [ RUN      ] HeapFileTest.EmptyPage
 unknown file: Failure
 C++ exception with description "Page id 0 out of range." thrown in the test body.
-[  FAILED  ] HeapFileTest.EmptyPage (0 ms)
-[----------] 1 test from HeapFileTest (0 ms total)
+[  FAILED  ] HeapFileTest.EmptyPage (1 ms)
+[----------] 1 test from HeapFileTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 0 tests.
 [  FAILED  ] 1 test, listed below:
 [  FAILED  ] HeapFileTest.EmptyPage
 
  1 FAILED TEST
 <end of output>
-Test time =   0.02 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Failed.
-"HeapFileTest.EmptyPage" end time: Oct 03 19:05 EDT
+"HeapFileTest.EmptyPage" end time: Oct 04 22:36 EDT
 "HeapFileTest.EmptyPage" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -226,7 +252,7 @@ Test Failed.
 9/15 Test: TupleTest.Constructor
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=TupleTest.Constructor" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"TupleTest.Constructor" start time: Oct 03 19:05 EDT
+"TupleTest.Constructor" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -239,13 +265,13 @@ Note: Google Test filter = TupleTest.Constructor
 [----------] 1 test from TupleTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"TupleTest.Constructor" end time: Oct 03 19:05 EDT
+"TupleTest.Constructor" end time: Oct 04 22:36 EDT
 "TupleTest.Constructor" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -253,7 +279,7 @@ Test Passed.
 10/15 Test: TupleTest.OffsetOf
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=TupleTest.OffsetOf" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"TupleTest.OffsetOf" start time: Oct 03 19:05 EDT
+"TupleTest.OffsetOf" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -266,13 +292,13 @@ Note: Google Test filter = TupleTest.OffsetOf
 [----------] 1 test from TupleTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"TupleTest.OffsetOf" end time: Oct 03 19:05 EDT
+"TupleTest.OffsetOf" end time: Oct 04 22:36 EDT
 "TupleTest.OffsetOf" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -280,7 +306,7 @@ Test Passed.
 11/15 Test: TupleTest.IndexOf
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=TupleTest.IndexOf" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"TupleTest.IndexOf" start time: Oct 03 19:05 EDT
+"TupleTest.IndexOf" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -296,10 +322,10 @@ Note: Google Test filter = TupleTest.IndexOf
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"TupleTest.IndexOf" end time: Oct 03 19:05 EDT
+"TupleTest.IndexOf" end time: Oct 04 22:36 EDT
 "TupleTest.IndexOf" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -307,7 +333,7 @@ Test Passed.
 12/15 Test: TupleTest.Compatible
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=TupleTest.Compatible" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"TupleTest.Compatible" start time: Oct 03 19:05 EDT
+"TupleTest.Compatible" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -323,10 +349,10 @@ Note: Google Test filter = TupleTest.Compatible
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"TupleTest.Compatible" end time: Oct 03 19:05 EDT
+"TupleTest.Compatible" end time: Oct 04 22:36 EDT
 "TupleTest.Compatible" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -334,7 +360,7 @@ Test Passed.
 13/15 Test: TupleTest.Length
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=TupleTest.Length" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"TupleTest.Length" start time: Oct 03 19:05 EDT
+"TupleTest.Length" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -350,10 +376,10 @@ Note: Google Test filter = TupleTest.Length
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"TupleTest.Length" end time: Oct 03 19:05 EDT
+"TupleTest.Length" end time: Oct 04 22:36 EDT
 "TupleTest.Length" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -361,7 +387,7 @@ Test Passed.
 14/15 Test: TupleTest.Merge
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=TupleTest.Merge" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"TupleTest.Merge" start time: Oct 03 19:05 EDT
+"TupleTest.Merge" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -377,10 +403,10 @@ Note: Google Test filter = TupleTest.Merge
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"TupleTest.Merge" end time: Oct 03 19:05 EDT
+"TupleTest.Merge" end time: Oct 04 22:36 EDT
 "TupleTest.Merge" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -388,7 +414,7 @@ Test Passed.
 15/15 Test: TupleTest.MergeConflict
 Command: "/Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1/pa1" "--gtest_filter=TupleTest.MergeConflict" "--gtest_also_run_disabled_tests"
 Directory: /Users/jinpeng/Desktop/CS660_PA1/build/tests/pa1
-"TupleTest.MergeConflict" start time: Oct 03 19:05 EDT
+"TupleTest.MergeConflict" start time: Oct 04 22:36 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /Users/jinpeng/Desktop/CS660_PA1/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -398,17 +424,17 @@ Note: Google Test filter = TupleTest.MergeConflict
 [----------] 1 test from TupleTest
 [ RUN      ] TupleTest.MergeConflict
 [       OK ] TupleTest.MergeConflict (0 ms)
-[----------] 1 test from TupleTest (0 ms total)
+[----------] 1 test from TupleTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"TupleTest.MergeConflict" end time: Oct 03 19:05 EDT
+"TupleTest.MergeConflict" end time: Oct 04 22:36 EDT
 "TupleTest.MergeConflict" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 03 19:05 EDT
+End testing: Oct 04 22:36 EDT

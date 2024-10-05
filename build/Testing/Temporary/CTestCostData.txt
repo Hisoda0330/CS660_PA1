@@ -1,18 +1,18 @@
-HeapPageTest.EmptyPage 14 0.0019107
-HeapPageTest.FullHeader 3 0.00586007
-HeapPageTest.CountTuples 3 0.00493103
-HeapPageTest.InsertTuple 14 0.00105562
-HeapPageTest.DeleteTuple 3 0.00469095
+HeapPageTest.EmptyPage 27 0.00352151
+HeapPageTest.FullHeader 16 0.00474723
+HeapPageTest.CountTuples 16 0.00459671
+HeapPageTest.InsertTuple 27 0.00281475
+HeapPageTest.DeleteTuple 16 0.00441254
 HeapPageTest.GetTuple 0 0
 HeapFileTest.InsertTuple 0 0
 HeapFileTest.EmptyPage 0 0
-TupleTest.Constructor 14 0.00108972
-TupleTest.OffsetOf 14 0.00104599
-TupleTest.IndexOf 14 0.00101855
-TupleTest.Compatible 14 0.00112307
-TupleTest.Length 14 0.00101137
-TupleTest.Merge 14 0.00109066
-TupleTest.MergeConflict 14 0.00118796
+TupleTest.Constructor 27 0.00303522
+TupleTest.OffsetOf 27 0.00264131
+TupleTest.IndexOf 27 0.00283282
+TupleTest.Compatible 27 0.00283512
+TupleTest.Length 27 0.00276815
+TupleTest.Merge 27 0.00245969
+TupleTest.MergeConflict 27 0.00348833
 ---
 HeapPageTest.GetTuple
 HeapFileTest.InsertTuple
