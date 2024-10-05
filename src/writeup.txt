@@ -1,10 +1,38 @@
-Describe any design decisions you made.
-I have couple design decision when I first read the assignment. The PA1 require us to work around the function of the HeapPage, HeapFile, and tuple as interat eachother with the bufferpool. The operations such as inserting, deleting, and accessing in the HeapPage needs to 
+1. Describe any design decisions you made.
+I have couple design decision when I first read the assignment. The PA1 require us to work around the function of the Dbfile, HeapPage, HeapFile,
+and tuple as interat each other with the bufferpool. For the Dbfile.cpp it should play a role of abstraction layer for the database file. It should 
+manage pages within pages and facilitate read, write of pages to disk with the open, pread, and pwrite. Also needs to ensure the resources are properly
+released when Dbfile object is destroyed.
+The HeapFile class is to implement DbFile with heap-based storage model. So we need to store tuples in pages, and should able to insert, delete, retrieval
+when its needs to the data. This class interact with the bufferpool where it manages the memory of the page. For the inseration of tuple, I thought of
+inserting it to the last page first before creating a new page to simplify the page management.
+The HeapPage class is to manage the internal structure of the page, where it should operate the tuple storage and slot management. The header should
+store as a compact bit array at the beginning of the page to minimize overhead, and it can save time to find empty slots without going thru the entire
+page. Also need to use slot indices to get access tuples for quicker iteration and location. For the tuple class i should ensure the tuple handles the
+logic of a row, such tupleDesc should able to check the size of the tuple to match.
 
-Describe any missing or incomplete elements of your code.
+2. Describe any missing or incomplete elements of your code.
+The insertion of tuples and emptying pages in the HeapFile class was not fully functional. Also the GetTuple method from the HeapPage class does not
+fully function as well. I have implements many of the error handling and the boundry check, but it would not pass the test. So there might be some
+logics is incorrect within the method.
 
+3. Answer the analytical questions.
+    1. Deleting tuples from a `HeapFile` might lead to having empty pages. How can we avoid having empty pages in a file? 
+    What is the cost of the solution you propose?
+    Deleting tuples from HeapFile can have empty pages scattered throughout the file, waste a lot of space in the disk, and 
+    cause inefficient disk functionality. To avoid having empty pages in the file when we delete tuples from a HeapFile. 
+    We can use the page compaction and reclamation strategy to create a list to keep track of the empty page within HeapFile, 
+    and when we need to insert a new tuple we can prioritize inserting the tuple into the page that is stored in the list. Having 
+    the list that stores the location of the empty page is important and we can do so much with it, such can skip the empty pages 
+    while we need to scan pages in the HeapFile. This is really efficient in cost, the memory cost for the list is O(k), where k is the
+    number of empty files. So it only costs a little more in memory to have the disk work much more efficiently.
 
-Answer the analytical questions.
+    2. In this assignment we have fixed size fields. How can we support variable size fields (e.g. `VARCHAR`)?
+    variable size fields are more complex since the size of the data can change. To support the variable-size fields, the slot directory 
+    should also store pointers to each tuple and the length of each tuple, so it's easier when it comes to finding the managing the data. 
+    We can also adjust the heap page structure by creating a table that stores the field offsets and the length of each field in bytes.
 
-
-Describe how long you spent on the assignment, and whether there was anything you found particularly difficult or confusing.
+4. Describe how long you spent on the assignment, and whether there was anything you found particularly difficult or confusing.
+I have worked on the assignment on and off for a week, most of the time was wasted in the beginning for figuring out the environment issue and the structure
+of the database. I think the most challenging part was managing the heapfile operations. The insertion and deletion took me a while and now still can't get
+the insetion working for the heapfile class. I overall spent about 20 hours in this assignment. 
