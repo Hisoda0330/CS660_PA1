@@ -14,7 +14,7 @@ HeapPage::HeapPage(Page &page, const TupleDesc &td) : td(td) {
 
   // Zero out the header initially
   count = 0;
-  for(size_t i = 0; i < capacity; i++){
+  for(size_t i = 0; i < capacity; ++i){
     if(!empty(i)){
       count++;
     }
@@ -65,16 +65,24 @@ void HeapPage::deleteTuple(size_t slot) {
   // Mark the slot as empty in the header
   int bitIndex = 7 - slot % 8;
   header[slot / 8] &= ~(1 << bitIndex);
-  count --;
+  count--;
 }
 
 Tuple HeapPage::getTuple(size_t slot) const {
   // TODO pa2: implement
-  if (slot >= capacity || empty(slot)) {
-    throw std::runtime_error("Slot is empty or out of range.");
+  // Check if the slot is out of range
+  if (slot >= capacity) {
+    throw std::runtime_error("Slot out of range.");
   }
 
-  // Deserialize the tuple from the data section
+  // If the slot is empty, return a tuple with default fields
+  if (empty(slot)) {
+    // Create a tuple with default fields; adjust this based on the Tuple constructor
+    std::vector<field_t> defaultFields(td.size());
+    return Tuple(defaultFields);
+  }
+
+  // Deserialize and return the tuple from the data section
   return td.deserialize(data + slot * td.length());
 }
 

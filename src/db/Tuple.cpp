@@ -167,14 +167,22 @@ Tuple TupleDesc::deserialize(const uint8_t *data) const {
         break;
       }
       case type_t::CHAR: {
-        char charValue[CHAR_SIZE];
-        std::memcpy(charValue, data + offset, sizeof(char) * CHAR_SIZE);
-        fields.emplace_back(std::string(charValue, CHAR_SIZE));
-        offset += sizeof(char) * CHAR_SIZE;
+        char charValue[CHAR_SIZE] = {};  // Initialize with zeros
+        std::memcpy(charValue, data + offset, CHAR_SIZE);
+        std::string str(charValue, CHAR_SIZE);
+
+        // Remove trailing null characters from the string
+        str.erase(std::find(str.begin(), str.end(), '\0'), str.end());
+        fields.emplace_back(str);
+        offset += CHAR_SIZE;
         break;
       }
+      default:
+        throw std::runtime_error("Unsupported type in TupleDesc::deserialize.");
     }
   }
+
+  return Tuple(fields);  // Return a Tuple object with the deserialized fields
 }
 
 

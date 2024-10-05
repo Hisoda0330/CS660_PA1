@@ -58,13 +58,13 @@ void HeapFile::deleteTuple(const Iterator &it) {
 
 Tuple HeapFile::getTuple(const Iterator &it) const {
   // TODO pa2: implement
-  // Get the database buffer pool
-  BufferPool &bufferPool = getDatabase().getBufferPool();
-  // Check if the page ID is within valid range
+  // Check if the page ID is within a valid range
   if (it.page >= numPages) {
     throw std::out_of_range("Page id " + std::to_string(it.page) + " out of range.");
   }
-  
+  // Get the database buffer pool
+  BufferPool &bufferPool = getDatabase().getBufferPool();
+
   // Get the page containing the tuple
   PageId pageId = {name, it.page};
   Page &page = bufferPool.getPage(pageId);
